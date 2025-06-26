@@ -42,6 +42,11 @@
             color: #2c3e50;
         }
 
+            .logo img {
+                height: 50px;
+                vertical-align: middle;
+            }
+
         nav ul {
             list-style: none;
             display: flex;
@@ -55,8 +60,39 @@
             transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: #e74c3c;
+            nav a:hover {
+                color: #e74c3c;
+            }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                display: block;
+                padding: 12px 16px;
+                text-decoration: none;
+                color: #2c3e50;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1;
+                    color: #e74c3c;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
 
         /* Hero Section */
@@ -97,9 +133,9 @@
             transition: background-color 0.3s;
         }
 
-        .cta-button:hover {
-            background-color: #c0392b;
-        }
+            .cta-button:hover {
+                background-color: #c0392b;
+            }
 
         /* Properties Section */
         .properties {
@@ -108,12 +144,12 @@
             padding: 0 20px;
         }
 
-        .properties h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2em;
-            color: #2c3e50;
-        }
+            .properties h2 {
+                text-align: center;
+                margin-bottom: 40px;
+                font-size: 2em;
+                color: #2c3e50;
+            }
 
         .property-grid {
             display: grid;
@@ -129,15 +165,15 @@
             transition: transform 0.3s;
         }
 
-        .property-card:hover {
-            transform: translateY(-5px);
-        }
+            .property-card:hover {
+                transform: translateY(-5px);
+            }
 
-        .property-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+            .property-card img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
 
         .property-card-content {
             padding: 15px;
@@ -166,45 +202,45 @@
             text-align: center;
         }
 
-        .contact h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
+            .contact h2 {
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
 
-        .contact form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+            .contact form {
+                max-width: 600px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
 
-        .contact input, .contact textarea {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-        }
+            .contact input, .contact textarea {
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                font-size: 1em;
+            }
 
-        .contact textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
+            .contact textarea {
+                resize: vertical;
+                min-height: 100px;
+            }
 
-        .contact button {
-            background-color: #e74c3c;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
+            .contact button {
+                background-color: #e74c3c;
+                color: white;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                transition: background-color 0.3s;
+            }
 
-        .contact button:hover {
-            background-color: #c0392b;
-        }
+                .contact button:hover {
+                    background-color: #c0392b;
+                }
 
         /* Footer */
         footer {
@@ -214,9 +250,9 @@
             padding: 20px;
         }
 
-        footer p {
-            margin: 0;
-        }
+            footer p {
+                margin: 0;
+            }
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -237,19 +273,55 @@
             .hero p {
                 font-size: 1em;
             }
+
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="nav-container">
-            <div class="logo"></div>
+            <div class="logo">
+                <img src="https://perfecthouseltd.in/wp-content/uploads/2024/02/logon1.jpg" alt="Your Real Estate Logo">
+            </div>
             <nav>
                 <ul>
                     <li><a href="Index.html">Home</a></li>
-                    <li><a href="Properties.html">Properties</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
-                    <li><a href="About.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="Properties.html">About</a>
+                        <div class="dropdown-content">
+                            <a href="#">Residential</a>
+                            <a href="#">Commercial</a>
+                            <a href="#">Luxury</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="Properties.html">Businesses</a>
+                        <div class="dropdown-content">
+                            <a href="#">Residential</a>
+                            <a href="#">Commercial</a>
+                            <a href="#">Luxury</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="Properties.html">Knowledge Hub</a>
+                        <div class="dropdown-content">
+                            <a href="#">Residential</a>
+                            <a href="#">Commercial</a>
+                            <a href="#">Luxury</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="Properties.html">Contact Us</a>
+                        <div class="dropdown-content">
+                            <a href="#">Get in Touch</a>
+                            <a href="#">Career Form</a>
+                            <a href="#">Service Network</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -304,7 +376,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Your Real Estate. All rights reserved.</p>
+        <p>© 2025 Your Real Estate. All rights reserved.</p>
     </footer>
 </body>
 </html>
