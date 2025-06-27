@@ -78,6 +78,7 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
             z-index: 1;
+            margin-top: 10px;
         }
 
             .dropdown-content a {
@@ -98,19 +99,20 @@
 
         /* Hero Section */
         .hero {
-            height: 100vh;
-            background: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2') no-repeat center center/cover;
+            height: 90vh;
+            background: url('aboutphpl.webp') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
             margin-top: 44px;
+            animation: fadeIn 2s ease-in;
         }
 
         .hero-content {
             background: rgba(0, 0, 0, 0.5);
-            padding: 30px;
+            padding: 0px;
             border-radius: 10px;
         }
 
@@ -138,7 +140,78 @@
                 background-color: #c0392b;
             }
 
-        /* Properties Section */
+        /* About Us Section */
+        .about {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+            .about h2 {
+                font-size: 2em;
+                color: #2c3e50;
+                margin-bottom: 30px;
+                animation: fadeInUp 1.5s ease-out;
+            }
+
+            .about p {
+                font-size: 1.1em;
+                color: #666;
+                margin-bottom: 20px;
+                text-align: justify;
+                animation: fadeInUp 1.9s ease-out 0.4s both;
+            }
+
+            .about .image-container {
+                margin: 20px auto;
+                max-width: 600px;
+            }
+
+            .about img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                animation: scaleIn 1.5s ease-out;
+            }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Properties Section (Unused here but kept for consistency) */
         .properties {
             max-width: 1200px;
             margin: 50px auto;
@@ -195,7 +268,7 @@
             font-weight: bold;
         }
 
-        /* Contact Section */
+        /* Contact Section (Unused here but kept for consistency) */
         .contact {
             background: #2c3e50;
             color: white;
@@ -333,29 +406,35 @@
     <header>
         <div class="nav-container">
             <div class="logo">
-                <img src="https://perfecthouseltd.in/wp-content/uploads/2024/02/logon1.jpg" alt="Your Real Estate Logo">
+                <img src="https://perfecthouseltd.in/wp-content/uploads/2024/02/logon1.jpg" alt="Perfect House Pvt. Ltd. Logo">
             </div>
             <nav>
                 <ul>
                     <li><a href="Index.html">Home</a></li>
                     <li class="dropdown">
-                        <a href="Properties.html">About</a>
+                        <a href="#">About</a>
                         <div class="dropdown-content">
                             <a href="AboutPHPL.html">About PHPL</a>
                             <a href="milestones.html">Milestones</a>
+                            <a href="#">Corporate Philosophy</a>
+                            <a href="#">CSR</a>
+                            <a href="#">Manufacturing Facility</a>
                         </div>
                     </li>
                     <li class="dropdown">
                         <a href="Properties.html">Businesses</a>
                         <div class="dropdown-content">
-                            <a href="PowerGenerator.html">Power Generator</a>
+                            <a href="#">Residential</a>
+                            <a href="#">Commercial</a>
+                            <a href="#">Luxury</a>
                         </div>
                     </li>
                     <li class="dropdown">
                         <a href="Properties.html">Knowledge Hub</a>
                         <div class="dropdown-content">
-                            <a href="#">Photo Gallery</a>
-                            <a href="#">Video Gallery</a>
+                            <a href="#">Residential</a>
+                            <a href="#">Commercial</a>
+                            <a href="#">Luxury</a>
                         </div>
                     </li>
                     <li class="dropdown">
@@ -363,6 +442,7 @@
                         <div class="dropdown-content">
                             <a href="#">Get in Touch</a>
                             <a href="#">Career Form</a>
+                            <a href="#">Service Network</a>
                         </div>
                     </li>
                 </ul>
@@ -370,53 +450,10 @@
         </div>
     </header>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Find Your Perfect Home</h1>
-            <p>Explore our exclusive range of properties tailored to your needs.</p>
-            <a href="#properties" class="cta-button">Browse Properties</a>
-        </div>
-    </section>
 
-    <section class="properties" id="properties">
-        <h2>Featured Properties</h2>
-        <div class="property-grid">
-            <div class="property-card">
-                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" alt="Property 1">
-                <div class="property-card-content">
-                    <h3>Modern Villa</h3>
-                    <p>3 Beds, 2 Baths, 2000 sqft</p>
-                    <p class="price">$450,000</p>
-                </div>
-            </div>
-            <div class="property-card">
-                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" alt="Property 2">
-                <div class="property-card-content">
-                    <h3>City Apartment</h3>
-                    <p>2 Beds, 1 Bath, 1200 sqft</p>
-                    <p class="price">$250,000</p>
-                </div>
-            </div>
-            <div class="property-card">
-                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" alt="Property 3">
-                <div class="property-card-content">
-                    <h3>Luxury Condo</h3>
-                    <p>4 Beds, 3 Baths, 3000 sqft</p>
-                    <p class="price">$750,000</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+
+
 
     <footer>
         <div class="footer-container">
@@ -427,8 +464,8 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <a href="Index.html">Home</a><br>
-                <a href="aboutphpl.html">About PHPL</a><br>
-                <a href="PowerGenerator.html">Businesses</a><br>
+                <a href="Aboutphpl.html">About</a><br>
+                <a href="Properties.html">Businesses</a><br>
                 <a href="Properties.html">Knowledge Hub</a><br>
                 <a href="Properties.html">Contact Us</a>
             </div>
@@ -436,7 +473,7 @@
                 <h3>Contact Info</h3>
                 <p>Email: info@perfecthouse.com</p>
                 <p>Phone: +91 123 456 7890</p>
-                <p>Perfect House Pvt. Ltd. 2nd Floor, 99C Kavya Aura, Next to Rosewood Hotel, Tardeo, Mumbai – 400034</p>
+                <p>Address: 123 Real Estate Road, Mumbai, India</p>
             </div>
             <div class="footer-section social">
                 <h3>Follow Us</h3>
@@ -447,7 +484,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 Perfect House Pvt. Ltd. All rights reserved.</p>
+            <p>� 2025 Perfect House Pvt. Ltd. All rights reserved.</p>
         </div>
     </footer>
 </body>
